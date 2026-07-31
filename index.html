@@ -386,6 +386,33 @@ button{font-family:inherit}
 .side-card .stack{margin-top:26px;padding-top:24px;border-top:1px solid var(--border-soft)}
 .side-card .stack .lbl{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
 
+.phase{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.phase .mono{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft)}
+.phase::after{content:"";height:1px;flex:1;background:var(--border-soft)}
+.dip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border-soft);border:1px solid var(--border-soft);border-radius:var(--radius);overflow:hidden}
+@media(max-width:760px){.dip-grid{grid-template-columns:1fr}}
+.dip-item{background:var(--surface);padding:24px 26px;display:flex;flex-direction:column;gap:8px;transition:background .25s}
+.dip-item:hover{background:var(--surface2)}
+.dip-feat{grid-column:span 2}
+@media(max-width:760px){.dip-feat{grid-column:span 1}}
+.dip-item .code{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.dip-item .t{font-size:1.02rem;font-weight:600;letter-spacing:-.01em;color:var(--text);line-height:1.35}
+.dip-item .d{font-size:.88rem;color:var(--muted);line-height:1.55}
+
+.edu-list{display:grid;gap:14px;max-width:880px}
+.edu-item{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+@media(max-width:640px){.edu-item{grid-template-columns:1fr}}
+.edu-yr{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-soft);padding:24px 22px;border-right:1px solid var(--border-soft);background:var(--bg2);display:flex;align-items:flex-start}
+@media(max-width:640px){.edu-yr{border-right:none;border-bottom:1px solid var(--border-soft)}}
+.edu-body{padding:24px 30px}
+.edu-body h3{font-size:1.18rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.edu-body .inst{margin-top:6px;color:var(--muted);font-size:.95rem}
+.edu-body .meta{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.edu-chip{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;color:var(--accent-soft);border:1px solid rgba(139,92,246,.4);background:var(--accent-dim);padding:4px 10px;border-radius:999px}
+.edu-body .extra{margin-top:14px;color:var(--muted);font-size:.9rem;line-height:1.6}
+.edu-subjects{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.edu-subjects .chip{font-size:.7rem;padding:4px 9px}
+
 .timeline{position:relative;max-width:880px}
 .timeline-line{position:absolute;top:0;bottom:0;left:11px;width:2px;background:linear-gradient(180deg,var(--accent),var(--muted2));transform-origin:top}
 @media(min-width:860px){.timeline-line{left:50%;transform:translateX(-50%)}}
@@ -488,6 +515,7 @@ button{font-family:inherit}
     <li><a href="#skills">Skills</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
   </ul>
   <a class="nav-cta" href="mailto:fakhiranurdayana145@gmail.com">Contact<i class="ph ph-arrow-right"></i></a>
 </nav>
@@ -663,6 +691,7 @@ button{font-family:inherit}
         <p class="hint">One production system<br>one experimental build<br>scroll to unpack</p>
       </div>
       <div class="projects-cards">
+        <p class="phase" data-reveal><span class="mono">Degree</span></p>
         <article class="project-card feature-card" data-reveal>
           <div class="card-top">
             <span class="mono">Final Year Project / Solo build</span>
@@ -767,6 +796,34 @@ button{font-family:inherit}
             </div>
           </div>
         </article>
+        <p class="phase" data-reveal style="margin-top:64px"><span class="mono">Diploma</span></p>
+        <div class="dip-grid" data-reveal>
+          <article class="dip-item dip-feat">
+            <span class="code">ICT200</span>
+            <p class="t">Ordering Food Database Management System</p>
+            <p class="d">Designed data organization, relationships, and hierarchies for a food ordering database.</p>
+          </article>
+          <article class="dip-item">
+            <span class="code">ISP250</span>
+            <p class="t">Mini-Mart Inventory Management System</p>
+            <p class="d">System problem solving, with user meetings to define business needs.</p>
+          </article>
+          <article class="dip-item">
+            <span class="code">CSC248</span>
+            <p class="t">Fundamentals of Data Structures</p>
+            <p class="d">Selected data structures to solve different problem types.</p>
+          </article>
+          <article class="dip-item">
+            <span class="code">CSC186</span>
+            <p class="t">Car Park Management System</p>
+            <p class="d">Java program with UML Class Diagram and Use Case Diagram.</p>
+          </article>
+          <article class="dip-item">
+            <span class="code">ITT300</span>
+            <p class="t">Simple Hotel Management Networking</p>
+            <p class="d">Built a simple hotel network.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -807,6 +864,68 @@ button{font-family:inherit}
     </div>
   </section>
 
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="overline">Education</p>
+        <h2>Four levels, one trajectory.</h2>
+      </div>
+      <div class="edu-list">
+        <div class="edu-item" data-reveal>
+          <div class="edu-yr">Sep 2024 - Present</div>
+          <div class="edu-body">
+            <h3>Bachelor of Computer Science (Hons.) Netcentric Computing</h3>
+            <p class="inst">UiTM Jasin, Melaka</p>
+            <div class="meta">
+              <span class="edu-chip">CGPA 3.73</span>
+            </div>
+            <p class="extra">Relevant coursework: Web Engineering, Mobile Cloud Computing, Network Design, IoT, Back-End Technology</p>
+          </div>
+        </div>
+        <div class="edu-item" data-reveal>
+          <div class="edu-yr">Mar 2022 - Present</div>
+          <div class="edu-body">
+            <h3>Diploma in Computer Science</h3>
+            <p class="inst">UiTM Perak Branch, Tapah Campus, Tapah, Perak</p>
+            <div class="meta">
+              <span class="edu-chip">CGPA 3.79</span>
+              <span class="edu-chip">Dean Lists for 4 semesters</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-item" data-reveal>
+          <div class="edu-yr">Mar 2021 - Aug 2021</div>
+          <div class="edu-body">
+            <h3>Diploma in Electrical Engineering (Computer)</h3>
+            <p class="inst">Politeknik Sultan Idris Shah, Sabak Bernam, Selangor</p>
+          </div>
+        </div>
+        <div class="edu-item" data-reveal>
+          <div class="edu-yr">Jan 2016 - Dec 2020</div>
+          <div class="edu-body">
+            <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+            <p class="inst">SMK Sri Andalas, Klang, Selangor</p>
+            <div class="meta">
+              <span class="edu-chip">CGPA 3.95</span>
+              <span class="edu-chip">6A 1B+ 1C+ 1E</span>
+            </div>
+            <div class="edu-subjects">
+              <span class="chip plain">Bahasa Melayu: A</span>
+              <span class="chip plain">Bahasa Inggeris: B+</span>
+              <span class="chip plain">Pendidikan Islam: A</span>
+              <span class="chip plain">Sejarah: A</span>
+              <span class="chip plain">Mathematics: A</span>
+              <span class="chip plain">Additional Mathematics: E</span>
+              <span class="chip plain">Sains Komputer: A</span>
+              <span class="chip plain">Physics: C+</span>
+            </div>
+            <p class="extra">School Leader of Exco Discipline (Prefect), Vice President of Taekwondo Club and Rugby Club, rugby player and Assistant Coach for an open club.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="credentials">
     <div class="container">
       <div class="section-head" data-reveal>
@@ -830,14 +949,30 @@ button{font-family:inherit}
           </div>
         </div>
         <div class="cred-col" data-reveal>
-          <div class="head"><i class="ph ph-users-three"></i><h3>Leadership</h3><span class="cnt">02</span></div>
+          <div class="head"><i class="ph ph-users-three"></i><h3>Leadership</h3><span class="cnt">06</span></div>
           <div class="cred-item">
-            <p class="t">Logistics Team Lead</p>
-            <p class="s">UiTM Tapah Fun Run 2024. Secured sponsorships from Gardenia and Milo, prepared 800 medals, 800 T-shirts, and 1000 colour powders for 800 participants.<small>2024</small></p>
+            <p class="t">Logistics Team Lead, Fun Run</p>
+            <p class="s">Prepared 850 T-shirts and 800 medals, secured sponsorships from Milo and Gardenia, and ran a selling booth with desserts and beverages.<small>UiTM Tapah, 2024</small></p>
           </div>
           <div class="cred-item">
             <p class="t">President, Taekwondo Club and Rugby Club</p>
             <p class="s">Led both clubs through a full season of training, fixtures, and student recruitment.<small>UiTM Tapah, 2023 - 2024</small></p>
+          </div>
+          <div class="cred-item">
+            <p class="t">Exco Discipline, Taekwondo Club</p>
+            <p class="s">Team leader for the club's disciplinary committee.<small>UiTM Tapah</small></p>
+          </div>
+          <div class="cred-item">
+            <p class="t">School Leader of Exco Discipline (Prefect)</p>
+            <p class="s"><small>SMK Sri Andalas</small></p>
+          </div>
+          <div class="cred-item">
+            <p class="t">Vice President, Taekwondo Club and Rugby Club</p>
+            <p class="s">Red Belt holder in Taekwondo.<small>SMK Sri Andalas</small></p>
+          </div>
+          <div class="cred-item">
+            <p class="t">Rugby player and Assistant Coach</p>
+            <p class="s">Played and coached for an open club.<small>SMK Sri Andalas</small></p>
           </div>
         </div>
       </div>
