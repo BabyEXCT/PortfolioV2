@@ -200,6 +200,10 @@ button{font-family:inherit}
   font-family:var(--font-sans);font-size:clamp(1.4rem,2.6vw,2rem);
   line-height:1.15;letter-spacing:-.02em;color:var(--text);max-width:16ch;
 }
+.stat-link{display:block;text-decoration:none;color:inherit}
+.stat-link i{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--accent-soft)}
+.stat-handle{display:block;margin-top:12px;font-size:clamp(1.2rem,2.4vw,1.7rem);word-break:break-all;color:var(--text);transition:color .2s}
+.stat-link:hover .stat-handle{color:var(--accent)}
 .stat-label{margin-top:14px;font-size:.95rem;color:var(--muted)}
 .stat-label small{display:block;color:var(--muted2);font-size:.82rem;margin-top:4px}
 @media(max-width:760px){.stats-row{grid-template-columns:1fr}}
@@ -543,16 +547,22 @@ button{font-family:inherit}
     </div>
   </section>
 
-  <section class="stats-band" aria-label="Academic highlights">
+  <section class="stats-band" aria-label="Profile links and highlights">
     <div class="container">
       <div class="stats-row">
         <div class="stat">
-          <p class="stat-num" data-count="3.73" data-dec="2">0.00</p>
-          <p class="stat-label">Current CGPA<small>Bachelor degree</small></p>
+          <a class="stat-link" href="https://github.com/fndayana" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-github-logo"></i>
+            <span class="stat-num stat-handle">@fndayana</span>
+            <span class="stat-label">GitHub<small>github.com/fndayana</small></span>
+          </a>
         </div>
         <div class="stat">
-          <p class="stat-num" data-count="3.79" data-dec="2">0.00</p>
-          <p class="stat-label">Diploma CGPA<small>Received 3.79 on graduation</small></p>
+          <a class="stat-link" href="https://www.linkedin.com/in/fndayana" target="_blank" rel="noopener noreferrer">
+            <i class="ph ph-linkedin-logo"></i>
+            <span class="stat-num stat-handle">in/fndayana</span>
+            <span class="stat-label">LinkedIn<small>linkedin.com/in/fndayana</small></span>
+          </a>
         </div>
         <div class="stat">
           <p class="stat-num stat-award">Vice Chancellor Award</p>
